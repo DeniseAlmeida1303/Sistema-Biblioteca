@@ -8,18 +8,15 @@
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  </head>
-<body>
-  <main>
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-5 text-left">
-        <img src="./Assets/imagens/DiversosLivros.jpg" alt="Livro" style="max-width: 100%;">
-      </div>
-      <div class="col-md-6">
+</head>
+  <body>
+    <main>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-5 text-left">
+          <img src="./Assets/imagens/DiversosLivros.jpg" alt="Livro" style="max-width: 100%;">
+        </div>
+        <div class="col-md-6">
     <h1 class="mb-2 text-center ">Sistema Bibliotecário</h1>
     <div class="card text-right">
       <div class="card-body">
@@ -28,8 +25,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group text-left">
-              <label for="id livro class=text-left">Id Livro</label>
-              <input type="text" class="form-control" id="titulo" placeholder="ID do livro">
+              <label for="id-livro class=text-left">Id Livro</label>
+              <input type="text" class="form-control" id="id-livro" placeholder="ID do livro">
             </div>
           </div>
           <div class="col-md-4">
@@ -60,7 +57,7 @@
           <div class="col-md-4">
            <div class="form-group text-left">
               <label for="Gênero class=text-left">Gênero</label>
-              <input type="text" class="form-control" id="Gêneror" placeholder="Ex:Romance">
+              <input type="text" class="form-control" id="Gênero" placeholder="Ex:Romance">
             </div>
           </div>
           <div class="col-md-6">
@@ -69,76 +66,75 @@
               <input type="text" class="form-control" id="Ano" placeholder="Ano de publicação do livro">
             </div>
           </div>
-          <div class="col-md-6">
-           <div class="form-group text-left">
-              <label for="Idioma class=text-left">Idioma</label>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="idiomaDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Selecione o idioma
-                </button>
-                <div class="dropdown-menu" aria-labelledby="idiomaDropdown">
-                  <a class="dropdown-item" href="#">Português</a>
-                  <a class="dropdown-item" href="#">Inglês</a>
-                  <a class="dropdown-item" href="#">Espanhol</a>
-                </div>
-              </div>
-              <script>
-                $(document).ready(function(){
-              $('.dropdown-toggle').dropdown();
-              });
-              </script>
-           </div>
+            <form class="selecionar idioma">
+    <div class="col-md-6">
+     <div class="form-group text-left">
+        <label for="Idioma class=text-left">Idioma</label>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="idiomaDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione o idioma
+          </button>
+          <div class="dropdown-menu" aria-labelledby="idiomaDropdown">
+            <a class="dropdown-item" href="#">Português</a>
+            <a class="dropdown-item" href="#">Inglês</a>
+            <a class="dropdown-item" href="#">Espanhol</a>
           </div>
         </div>
-      </div>
-    </div> 
-             <div class="row">
-        <div class="col-6">
-          <button type="submit" class="btn btn-outline-success btn-md float-right">Inserir</button>
-        </div>
-        <div class="col-4 ">
-          <button type="submit" class="btn btn-outline-warning  btn-md float-right">Selecionar</button>
-        </div>
-        <div class="col-6 mt-4">
+        <script>
+          $(document).ready(function(){
+        $('.dropdown-toggle').dropdown();
+        });
+        </script>
+        </form>
         </div>
       </div>
-          <div class="row">
-            <div class="col-6">
-              <button type="submit" class="btn btn-outline-info btn-md float-right">Atualizar</button>
-            </div>
-            <div class="col-4 ">
-              <button type="submit" class="btn  btn-outline-danger btn-md  float-right">Excluir</button>
-            </div>
-            <div class="col-6 ">
-            </div>
-          </div> 
-        </div>
+    </div>
   </div>
-</div>       
-  </main>
-  
-       <!-- READ table -->
-       <div class="card mb-5 text-center">
-        <div class="card-header">
-          Lista de Livros
-        </div>
-        <div class="card-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Id do livro</th>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>N° de Páginas</th>
-                <th>Editora</th>
-                <th>Gênero</th>
-                <th>Ano</th>
-                <th>Idioma</th>
-              </tr>
-            </thead>  
-          </table>
-        </div>
+  </div>
+  </div>
+  <div class="container ">
+    <div class="d-flex justify-content-end mb-3">
+      <div class="col-md-7 mb-3 ">
+        <button type="submit" class="btn btn-outline-success btn-md float-right">Inserir</button>
       </div>
-    </body>
-  </html>
-   
+      <div class="col-1 col-md-auto mb-3">
+        <button type="submit" class="btn btn-outline-warning btn-md float-right">Selecionar</button>
+      </div>
+      <div class="col-6 col-md-auto mb-3">
+        <button type="submit" class="btn btn-outline-info btn-md float-right">Atualizar</button>
+      </div>
+      <div class="col-1 col-md-auto mb-3">
+        <button type="submit" class="btn btn-outline-danger btn-md float-right">Excluir</button>
+      </div>
+      <div class="col-6 col-md mb-3">
+        <!-- coluna vazia -->
+      </div>
+    </div>
+  </div>
+   <!-- READ table -->
+ <div class="card col-12 text-center">
+  <div class="card-header">
+    Lista de Livros
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id do livro</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>N° de Páginas</th>
+          <th>Editora</th>
+          <th>Gênero</th>
+          <th>Ano</th>
+          <th>Idioma</th>
+        </tr>
+      </thead>  
+    </table>
+  </div>
+</div>
+  
+
+  </main>
+</body>
+</html>
