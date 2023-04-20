@@ -7,17 +7,17 @@
   <title>Biblioteca CRUD</title>
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+  </head>
   <body>
     <main>
-    <div class="container mt-4">
+    <div class="container mt-5">
       <div class="row">
-        <div class="col-md-5 text-left">
+        <div class="col-5 text-left">
           <img src="./Assets/imagens/DiversosLivros.jpg" alt="Livro" style="max-width: 100%;">
         </div>
         <div class="col-md-6">
-    <h1 class="mb-2 text-center ">Sistema Bibliotecário</h1>
+    <h1 class="mb-2 text-center ">Biblioteca</h1>
     <div class="card text-right">
       <div class="card-body">
         <div class="col-md-4 text-right">
@@ -66,39 +66,25 @@
               <input type="text" class="form-control" id="Ano" placeholder="Ano de publicação do livro">
             </div>
           </div>
-            <form class="selecionar idioma">
-    <div class="col-md-6">
-     <div class="form-group text-left">
-        <label for="Idioma class=text-left">Idioma</label>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="idiomaDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Selecione o idioma
-          </button>
-          <div class="dropdown-menu" aria-labelledby="idiomaDropdown">
-            <a class="dropdown-item" href="#">Português</a>
-            <a class="dropdown-item" href="#">Inglês</a>
-            <a class="dropdown-item" href="#">Espanhol</a>
-          </div>
-        </div>
-        <script>
-          $(document).ready(function(){
-        $('.dropdown-toggle').dropdown();
-        });
-        </script>
-        </form>
-        </div>
-      </div>
+          <div class="form-group text-left">
+            <label for="Idioma" class="text-left">Idioma</label>
+            <div class="col-12">
+              <select class="form-select form-select-lg rounded-8 form-control" aria-label="selecione idioma">
+                <option selected>Selecione idioma</option>
+                <option value="1">Português</option>
+                <option value="2">Inglês</option>
+                <option value="3">Espanhol</option>
+              </select>
+            </div>
+          </div>    
     </div>
   </div>
   </div>
   </div>
   <div class="container ">
-    <div class="d-flex justify-content-end mb-3">
-      <div class="col-md-7 mb-3 ">
+    <div class="d-flex justify-content-end mb-4">
+      <div class="col-md-7 mb-2 ">
         <button type="submit" class="btn btn-outline-success btn-md float-right">Inserir</button>
-      </div>
-      <div class="col-1 col-md-auto mb-3">
-        <button type="submit" class="btn btn-outline-warning btn-md float-right">Selecionar</button>
       </div>
       <div class="col-6 col-md-auto mb-3">
         <button type="submit" class="btn btn-outline-info btn-md float-right">Atualizar</button>
@@ -111,6 +97,10 @@
       </div>
     </div>
   </div>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="filtrar" aria-label="filtrar">
+    <button class="btn btn-outline-warning" type="submit">Buscar</button>
+</form>
    <!-- READ table -->
  <div class="card col-12 text-center">
   <div class="card-header">
@@ -133,8 +123,6 @@
     </table>
   </div>
 </div>
-  
-
-  </main>
+</main>
 </body>
 </html>
