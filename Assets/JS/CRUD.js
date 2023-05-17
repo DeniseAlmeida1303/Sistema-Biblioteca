@@ -60,7 +60,7 @@ function cadastrar() {
   const CodLivro = document.querySelector("#CodLivro").value;
   const titulo = document.querySelector("#titulo").value;
   const autor = document.querySelector("#autor").value;
-  const numPaginas = document.querySelector("#numpaginas").value;
+  const numPaginas = document.querySelector("#numPaginas").value;
   const editora = document.querySelector("#editora").value;
   const genero = document.querySelector("#genero").value;
   const ano = document.querySelector("#ano").value;
